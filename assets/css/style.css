@@ -1,0 +1,60 @@
+body {
+    background-color: aquamarine;
+   
+}
+
+    
+    input {
+      margin: 10px;
+    }
+
+
+button {
+	width: auto;
+	height: 20px;
+    margin: 10px;
+    float: left;
+    font-size: 1pc;
+    font-style: bold;
+    
+}
+
+form {
+    margin: 10px;
+}
+
+div {
+    margin: 10px;
+    float: left;
+}
+
+img {
+	height: 200px;
+    width: auto;
+    margin: 10px;
+    float: left;
+}
+
+h1{
+    text-align: center;
+    color:white;
+    font-style: bold;
+    background-color: black;
+    opacity: 0.7;
+    font-size: 5pc;
+    width: 80%;
+    margin: 1% 10% 0 10%
+    
+
+} 
+
+h2, h3 {
+    text-align: center;
+    color:white;
+    font-style: bold;
+    background-color: black;
+    opacity: 0.7;
+    font-size: 2pc;
+    width: 80%;
+    margin: 1% 10% 0 10%
+}
