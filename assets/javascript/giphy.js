@@ -1,5 +1,5 @@
-var giphyArr= ["Dog", "Cat"];
-    var positionArr=[0,1,2,3,4,5,6,7,8,9];
+var giphyArr= ["Dog", "Cat"]; //initial gihp array
+    var positionArr=[0,1,2,3,4,5,6,7,8,9]; // array use to find the position of the data coming from URL
     console.log(giphyArr.length);
     
     function displayGiphy() {
@@ -8,6 +8,7 @@ var giphyArr= ["Dog", "Cat"];
 $(".giphy-btn").click(function(){
   $("p").remove();
   $("img").remove();
+  $("giphy-view").remove();
   //$("div").remove();
 });
 
@@ -21,20 +22,20 @@ var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=NN3HgUr25xfdaeYVR9A
       
       console.log(response);
 
-    // Creating a div to hold the movie
+    // Creating a div to hold giphy
     for(i=0; i<positionArr.length; i++){
     var giphyDiv = $("<div class='giphy'>");
 
 
-// Storing the rating data
+// Stores the rating data
 var rating = response.data[i].rating;
 
 
-// Creating an element to have the rating displayed
-var pOne = $("<p>").text("Rating: " + rating);
+// Create an element to display rating
+var rating1 = $("<p>").text("Rating: " + rating);
 
-// Displaying the rating
-giphyDiv.append(pOne);
+// Displaysthe rating
+giphyDiv.append(rating1);
 
 // Retrieving the URL for the image
 //var imgURL = response.data[i].images.original_still.url;
@@ -97,7 +98,7 @@ event.preventDefault();
 // This line grabs the input from the textbox
 var GiphyVal = $("#giphy-input").val().trim();
 
-// Adding movie from the textbox to our array
+// Adding giphy from the textbox to our array
 giphyArr.push(GiphyVal);
 
 // Calling renderButtons which handles the processing of our movie array
